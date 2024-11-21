@@ -12,4 +12,6 @@ HERO Section
     - One Columns
 
 MORE Information
+    - Explain the features and benefits 
+    (What is the purpose of this section)
 
