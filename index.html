@@ -11,63 +11,100 @@
         <div class="logo">CoffeeWatch</div>
         <nav>
             <ul class="menu">
-                <li><a href="user-dashboard.html">User Dashboard</a></li>
+                <li>
+                    <a href="user-dashboard.html">
+                        <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
             <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Welcome to CoffeeWatch</h1>
-        <p>Discover the best coffee shops in Mintal, Davao City and interact with your favorites!</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Your Perfect Cup Awaits</h1>
+                <p class="tagline">Explore, Rate, and Connect with Mintal's Finest Coffee Havens</p>
+                <p class="sub-tagline">Discover the best coffee shops in Mintal, Davao City and interact with your favorites!</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-coffee.jpg" alt="Aesthetic coffee cup with latte art">
+            </div>
+        </div>
     </section>
 
-    <!-- Coffee Shop 1 -->
-    <section id="coffee-shop-1" class="coffee-shop">
-        <h2>Coffee Shop 1</h2>
-        <p>Known for its cozy ambiance and premium espresso drinks, Coffee Shop 1 is a great spot to relax.</p>
-        <a href="coffee-shop-1.html" class="learn-more-btn">Learn More</a>
-    </section>
+    <div class="coffee-shops-container">
+        <h2 class="section-title">Featured Coffee Shops</h2>
+        <div class="coffee-shops-grid">
+            <!-- Coffee Shop 1 -->
+            <section id="coffee-shop-1" class="coffee-shop">
+                <h2>Coffee Shop 1</h2>
+                <div class="coffee-shop-image">
+                    <img src="images/coffee-shop-1.jpg" alt="Coffee Shop 1">
+                    <div class="overlay">
+                        <p>Known for its cozy ambiance and premium espresso drinks, Coffee Shop 1 is a great spot to relax.</p>
+                        <a href="coffee-shop-1.html" class="learn-more-btn">Learn More</a>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Coffee Shop 2 -->
-    <section id="coffee-shop-2" class="coffee-shop">
-        <h2>Coffee Shop 2</h2>
-        <p>A perfect hangout for students and freelancers looking for a comfortable workspace with great coffee.</p>
-        <a href="coffee-shop-2.html" class="learn-more-btn">Learn More</a>
-    </section>
+            <!-- Coffee Shop 2 -->
+            <section id="coffee-shop-2" class="coffee-shop">
+                <h2>Coffee Shop 2</h2>
+                <div class="coffee-shop-image">
+                    <img src="images/coffee-shop-2.jpg" alt="Coffee Shop 2">
+                    <div class="overlay">
+                        <p>A perfect hangout for students and freelancers looking for a comfortable workspace with great coffee.</p>
+                        <a href="coffee-shop-2.html" class="learn-more-btn">Learn More</a>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Coffee Shop 3 -->
-    <section id="coffee-shop-3" class="coffee-shop">
-        <h2>Coffee Shop 3</h2>
-        <p>A local favorite offering unique coffee blends and mouthwatering pastries.</p>
-        <a href="coffee-shop-3.html" class="learn-more-btn">Learn More</a>
-    </section>
-
-    <!-- User Profile Section -->
-    <section id="profile">
-        <h2>Your Profile</h2>
-        <p>Welcome, [User Name]. Manage your profile and preferences here.</p>
-        <button>Edit Profile</button>
-    </section>
-
-    <!-- User Engagement Section -->
-    <section id="engagement">
-        <h2>Engagement with Coffee Shops</h2>
-        <p>Explore our interactive features and engage with your favorite coffee shops.</p>
-        <button>Place an Order</button>
-        <button>Join Loyalty Program</button>
-    </section>
-
-    <!-- Reviews Section -->
-    <section id="reviews">
-        <h2>Leave a Review</h2>
-        <p>Share your experience with the coffee shops. Your feedback matters!</p>
-        <textarea placeholder="Write a review..."></textarea>
-        <button>Submit Review</button>
-    </section>
+            <!-- Coffee Shop 3 -->
+            <section id="coffee-shop-3" class="coffee-shop">
+                <h2>Coffee Shop 3</h2>
+                <div class="coffee-shop-image">
+                    <img src="images/coffee-shop-3.jpg" alt="Coffee Shop 3">
+                    <div class="overlay">
+                        <p>A local favorite offering unique coffee blends and mouthwatering pastries.</p>
+                        <a href="coffee-shop-3.html" class="learn-more-btn">Learn More</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2024 CoffeeWatch. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@coffeewatch.com</p>
+                <p>Phone: +63 912 345 6789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CoffeeWatch. All Rights Reserved.</p>
+            <p>Made with ☕ in Mintal, Davao City</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
