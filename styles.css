@@ -44,37 +44,37 @@ header .menu-toggle {
 }
 
 .hero {
-    padding: 4rem 2rem;
-    background-color: #ddc8ba;
-    color: #513928;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
 .hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    padding: 20px;
+    max-width: 800px;
 }
 
-.hero-text {
-    flex: 1;
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-image {
-    flex: 1;
+.hero .tagline {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 300;
 }
 
-.hero-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.tagline {
-    font-size: 1.5rem;
-    color: #725038;
-    margin-bottom: 1rem;
+.hero .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
 .coffee-shops-grid {
@@ -407,4 +407,71 @@ footer {
 
 .footer-bottom {
     font-size: 0.9rem;
+}
+
+.coffee-shops-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.coffee-shops-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.coffee-shop {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    padding: 0 20px;
+    box-sizing: border-box;
+    min-width: 100%;
+}
+
+.coffee-shop-image {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+}
+
+.coffee-shop-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hide scrollbar but keep functionality */
+.coffee-shops-scroll {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.coffee-shops-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.coffee-shop h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Optional: Add a subtle text shadow for better readability */
+.coffee-shop h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add hover effect */
+.coffee-shop h2:hover {
+    color: #666;
+    transition: color 0.3s ease;
 }
