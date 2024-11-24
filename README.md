@@ -1,2 +1,2 @@
-# coffeewatch.github.io
+# coffeewatch
 CMSC 3 Final Project 
