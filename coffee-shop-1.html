@@ -8,39 +8,75 @@
 </head>
 <body>
     <header>
-        <div class="logo">CoffeeWatch</div>
-        <nav>
+        <div class="left-section">
+            <a href="index.html">
+                <img src="images/logo-removebg-preview.png" alt="CoffeeWatch Logo" class="logo-img">
+            </a>
+        </div>
+        <nav class="right-section">
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Menu</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+                <li>
+                    <a href="user-dashboard.html" class="user-profile">
+                        <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
-            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Coffee Shop 1</h1>
-        <p>Known for its cozy ambiance and premium espresso drinks, Coffee Shop 1 is a great place to relax and enjoy your favorite coffee.</p>
+        <div class="hero-content">
+            <h1>Coffee Shop 1</h1>
+            <p>Known for its cozy ambiance and premium espresso drinks, Coffee Shop 1 is a great place to relax and enjoy your favorite coffee.</p>
+        </div>
     </section>
 
-    <section class="details">
-        <h2>About Coffee Shop 1</h2>
-        <p>Located in the heart of Mintal, Coffee Shop 1 has become a favorite spot for students, freelancers, and coffee enthusiasts. It features a variety of espresso drinks, pastries, and a relaxing atmosphere perfect for spending a few hours working or socializing.</p>
+    <main class="container">
+        <section class="content">
+            <div class="about-section">
+                <h2>About Coffee Shop 1</h2>
+                <p>Located in the heart of Mintal, Coffee Shop 1 has become a favorite spot for students, freelancers, and coffee enthusiasts. It features a variety of espresso drinks, pastries, and a relaxing atmosphere perfect for spending a few hours working or socializing.</p>
+            </div>
 
-        <h2>Menu Highlights</h2>
-        <ul>
-            <li>Espresso - ₱100</li>
-            <li>Latte - ₱120</li>
-            <li>Chocolate Cake - ₱150</li>
-        </ul>
+            <div class="menu-section">
+                <h2>Menu Highlights</h2>
+                <ul>
+                    <li>Espresso - ₱100</li>
+                    <li>Latte - ₱120</li>
+                    <li>Chocolate Cake - ₱150</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-        <h2>Contact Information</h2>
-        <p>Email: contact@coffeeshop1.com</p>
-        <p>Phone: +63 912 345 6789</p>
-        <p>Address: Mintal, Davao City, Philippines</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 CoffeeWatch. All Rights Reserved.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Visit Us</h3>
+                <p>123 Coffee Street</p>
+                <p>Mintal, Davao City</p>
+                <p>Philippines</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Monday - Friday: 7am - 8pm</p>
+                <p>Saturday - Sunday: 8am - 9pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@coffeeshop1.com</p>
+                <p>Follow us: @coffeeshop1</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Coffee Shop 1. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

@@ -1,87 +1,125 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset and Base Styles */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #ede2db;
-    color: #513928;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
 header {
+    background-color: #513928;
+    box-shadow: 0 2px 5px rgba(26, 15, 10, 0.2);
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #513928;
-    color: #ede2db;
-    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-header .logo {
-    font-size: 1.5em;
+.logo a {
+    font-size: 1.5rem;
     font-weight: bold;
-}
-
-header nav .menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav .menu li {
-    margin: 0 10px;
-}
-
-header nav .menu li a {
-    color: #fff;
+    color: #2c3e50;
     text-decoration: none;
 }
 
-header .menu-toggle {
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ede2db;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ddc8ba;
+}
+
+.menu-toggle {
     display: none;
-    font-size: 1.5em;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/coffee-beans-bg.jpg');
     background-size: cover;
     background-position: center;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     color: white;
+    padding: 4rem 2rem;
+    text-align: center;
 }
 
-.hero-content {
-    padding: 20px;
-    max-width: 800px;
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero .tagline {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    font-weight: 300;
-}
-
-.hero .subtitle {
+.hero-content p {
     font-size: 1.2rem;
-    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-section, .menu-section {
+    background: #ede2db;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-section li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 .coffee-shops-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem;
+    gap: 30px;
+    grid-template-columns: 1fr;
 }
 
 .section-title {
@@ -182,7 +220,7 @@ header .menu-toggle {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #af7e5e;
+    background-color: #936648;
     color: #ede2db;
     text-decoration: none;
     border-radius: 4px;
@@ -190,7 +228,7 @@ header .menu-toggle {
 }
 
 .learn-more-btn:hover {
-    background-color: #936648;
+    background-color: #af7e5e;
 }
 
 button {
@@ -246,12 +284,11 @@ footer {
 }
 
 .user-icon {
-    fill: currentColor;
-    vertical-align: middle;
+    fill: #ede2db;
 }
 
-.menu a:hover .user-icon {
-    fill: #bf987e;
+.user-icon:hover {
+    fill: #ddc8ba;
 }
 
 /* General responsive containers */
@@ -404,55 +441,76 @@ footer {
         background: rgba(81, 57, 40, 0.9);
     }
 }
-
 .footer-bottom {
     font-size: 0.9rem;
 }
 
+/* Coffee Shops Slider Container */
 .coffee-shops-container {
+    position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 20px 0;
 }
 
+/* Slider Scroll Container */
 .coffee-shops-scroll {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    transition: transform 0.5s ease;
+    width: 100%;
 }
 
 .coffee-shop {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    padding: 0 20px;
-    box-sizing: border-box;
     min-width: 100%;
+    box-sizing: border-box;
 }
 
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.coffee-shop a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Coffee Shop Image Container */
 .coffee-shop-image {
     width: 100%;
     height: 60vh;
     position: relative;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .coffee-shop-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-/* Hide scrollbar but keep functionality */
-.coffee-shops-scroll {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-}
-
-.coffee-shops-scroll::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-}
-
+/* Coffee Shop Title */
 .coffee-shop h2 {
     font-size: 2.5rem;
     text-align: center;
@@ -463,15 +521,582 @@ footer {
     letter-spacing: 2px;
     position: relative;
     z-index: 2;
-}
-
-/* Optional: Add a subtle text shadow for better readability */
-.coffee-shop h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Optional: Add hover effect */
 .coffee-shop h2:hover {
     color: #666;
     transition: color 0.3s ease;
 }
+
+/* Overlay Content */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(81, 57, 40, 0.9);
+    color: #ede2db;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.coffee-shop-image:hover .overlay {
+    opacity: 1;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #936648;
+    color: #ede2db;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #af7e5e;
+}
+
+/* Touch Device Optimization */
+@media (hover: none) {
+    .overlay {
+        opacity: 1;
+        background: rgba(81, 57, 40, 0.9);
+    }
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .coffee-shop-image {
+        height: 250px;
+    }
+
+    .coffee-shop h2 {
+        font-size: 2rem;
+    }
+
+    .overlay p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .coffee-shop-image {
+        height: 200px;
+    }
+
+    .coffee-shop h2 {
+        font-size: 1.8rem;
+    }
+
+    .overlay p {
+        font-size: 0.9rem;
+    }
+
+    .learn-more-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-img {
+    width: 70px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    font-size: 4rem;  /* Increased from 2.5rem */
+    font-weight: bold;
+    color: var(--coffee-tint-4);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;  /* Increased letter spacing for better readability */
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 3rem;  /* Increased from 2rem for mobile */
+    }
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.user-profile:hover {
+    background-color: #ac7a58;
+}
+
+.user-icon {
+    width: 50px;
+    height: 50px;
+    fill: white;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #795548;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}
+
+.coffee-shop a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.coffee-shop a:visited {
+    color: inherit;
+}
+
+.learn-more-btn:visited {
+    color: inherit;
+}
+
+/* Add this new separator style */
+.section-separator {
+    width: 80%;
+    max-width: 1200px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #513928, transparent);
+    margin: 80px auto;  /* Adds space above and below the line */
+    border: none;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+/* Base styles */
+.hero-content, .coffee-shops-container {
+    width: 90%;
+    max-width: 1000px;  /* Reduced from 1200px for better proportion */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Coffee shops grid */
+.coffee-shops-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;  /* Single column by default */
+}
+
+/* Responsive breakpoints */
+@media screen and (min-width: 768px) {
+    .coffee-shops-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .coffee-shops-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Coffee Shop 1 Page Styles */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.about-section,
+.menu-section {
+    margin-bottom: 3rem;
+}
+
+.about-section h2,
+.menu-section h2,
+.contact-section h2 {
+    color: #4A321C;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.about-section p,
+.contact-section p {
+    line-height: 1.6;
+}
+
+.menu-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-section {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+    margin-top: 80px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.contact-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-section h2 {
+    color: #513928;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.contact-section p {
+    margin: 15px 0;
+    line-height: 1.6;
+    color: #513928;
+    text-align: left;
+}
+
+.contact-section a {
+    color: #936648;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+    color: #af7e5e;
+}
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-link:hover {
+    color: #ccc;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.footer {
+    background-color: #513928;
+    color: #ede2db;
+    padding: 30px 0 0;  /* Base padding for all sizes */
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    max-width: 1200px;
+    width: 90%;  /* Added to ensure consistent side margins */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;  /* Reduced base gap */
+    padding: 0 20px;
+}
+
+.footer-section {
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding: 15px 0;
+    background-color: #725038;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Wide screens */
+@media (min-width: 1200px) {
+    .footer-content {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));  /* Set minimum column width */
+        gap: 40px;  /* Increased gap for wider screens */
+        padding: 0;  /* Remove padding as width is controlled by width: 90% */
+    }
+}
+
+/* Medium screens */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/coffee-beans-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Content */
+.container {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Section Styles */
+.profile-section,
+.engagement-section,
+.review-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content layout within sections */
+.profile-section h2,
+.engagement-section h2,
+.review-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Specific adjustments for review section */
+.review-section #reviewForm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-section textarea {
+    flex: 1;
+    margin-bottom: 1rem;
+    min-height: 0;
+}
+
+/* Button positioning */
+.button-group {
+    margin-top: auto;
+}
+
+/* Large screens (desktop) */
+@media (min-width: 1024px) {
+    .content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2.5rem;
+    }
+
+    .profile-section,
+    .engagement-section,
+    .review-section {
+        flex: 0 1 350px;
+        min-width: 350px;
+        max-width: 350px;
+        height: 350px;
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .profile-section,
+    .engagement-section,
+    .review-section {
+        flex: 0 1 400px;
+        min-width: 400px;
+        max-width: 400px;
+        height: 400px;
+    }
+}
+
+/* Medium and small screens */
+@media (max-width: 1023px) {
+    .profile-section,
+    .engagement-section,
+    .review-section {
+        height: 300px;
+    }
+}
+
+h2 {
+    color: #4A3428;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #D4A373;
+    padding-bottom: 0.5rem;
+}
+
+/* Buttons */
+button {
+    background-color: #D4A373;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #A67F5D;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Review Form */
+#reviewForm {
+    margin-top: 1rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    resize: vertical;
+}
+
