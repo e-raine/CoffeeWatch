@@ -10,6 +10,9 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Styles */
@@ -65,12 +68,35 @@ main {
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/coffee-beans-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 4rem 2rem;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.6); /* This darkens the image slightly for better text readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
     text-align: center;
+    color: white;
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
 }
 
 .hero-content h1 {
@@ -90,6 +116,7 @@ main {
     width: 90%;
     margin: 0 auto;
     padding: 2rem;
+    padding-bottom: 60px;
 }
 
 .content {
@@ -97,6 +124,7 @@ main {
     flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
+    margin-bottom: 40px;
 }
 
 .about-section, .menu-section {
@@ -266,6 +294,8 @@ footer {
     padding: 10px;
     background: #6B4F4F;
     color: #fff;
+    padding: 20px 0;
+    margin-top: auto;
 }
 
 @media (max-width: 768px) {
@@ -978,36 +1008,39 @@ footer {
     border-radius: 12px;
     padding: 2.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    width: 100%;
-    height: 300px;
     display: flex;
     flex-direction: column;
+    height: 350px; /* Fixed height for all sections */
+    position: relative; /* For button positioning */
 }
 
-/* Content layout within sections */
+/* Content layout */
 .profile-section h2,
 .engagement-section h2,
 .review-section h2 {
-    margin-bottom: 1.5rem;
-}
-
-/* Specific adjustments for review section */
-.review-section #reviewForm {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.review-section textarea {
-    flex: 1;
     margin-bottom: 1rem;
-    min-height: 0;
 }
 
 /* Button positioning */
+.button-container,
 .button-group {
-    margin-top: auto;
+    margin-top: auto; /* Push buttons to bottom */
+    padding-bottom: 1rem; /* Space from bottom */
+}
+
+/* Review form specific */
+#reviewForm {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Take remaining space */
+}
+
+textarea {
+    flex: 1; /* Take remaining space in form */
+    min-height: 100px;
+    max-height: 150px;
+    margin-bottom: 1rem;
+    resize: none; /* Prevent resize to maintain layout */
 }
 
 /* Large screens (desktop) */
@@ -1022,35 +1055,9 @@ footer {
     .profile-section,
     .engagement-section,
     .review-section {
-        flex: 0 1 350px;
-        min-width: 350px;
-        max-width: 350px;
-        height: 350px;
-    }
-}
-
-/* Extra large screens */
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1600px;
-    }
-
-    .profile-section,
-    .engagement-section,
-    .review-section {
-        flex: 0 1 400px;
-        min-width: 400px;
-        max-width: 400px;
-        height: 400px;
-    }
-}
-
-/* Medium and small screens */
-@media (max-width: 1023px) {
-    .profile-section,
-    .engagement-section,
-    .review-section {
-        height: 300px;
+        flex: 1; /* Equal width for all sections */
+        min-width: 0; /* Allow sections to shrink if needed */
+        max-width: 350px; /* Maximum width */
     }
 }
 
@@ -1098,5 +1105,67 @@ textarea {
     margin-bottom: 1rem;
     font-family: inherit;
     resize: vertical;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.action-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #357abd;
+}
+
+.content > div {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.review-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#reviewForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    resize: vertical;
+    margin-bottom: 0.5rem;
+}
+
+.review-section .button-container {
+    margin-top: 0;
+    padding-bottom: 0.5rem; /* Add some padding at the bottom */
 }
 

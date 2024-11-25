@@ -41,15 +41,17 @@
             <div class="profile-section">
                 <h2>Your Profile</h2>
                 <p>Welcome, <span id="userName">[User Name]</span>. Manage your profile and preferences here.</p>
-                <button type="button" aria-label="Edit your profile">Edit Profile</button>
+                <div class="button-container">
+                    <button type="button" aria-label="Edit your profile">Edit Profile</button>
+                </div>
             </div>
 
             <div class="engagement-section">
                 <h2>Engagement with Coffee Shops</h2>
                 <p>Explore our interactive features and engage with your favorite coffee shops.</p>
                 <div class="button-group">
-                    <button type="button">Place an Order</button>
-                    <button type="button">Join Loyalty Program</button>
+                    <button type="button" class="action-button">Place an Order</button>
+                    <button type="button" class="action-button">Join Loyalty Program</button>
                 </div>
             </div>
 
@@ -63,13 +65,15 @@
                         placeholder="Write a review..."
                         aria-label="Write your review"
                         required></textarea>
-                    <button type="submit">Submit Review</button>
+                    <div class="button-container">
+                        <button type="submit" class="action-button">Submit Review</button>
+                    </div>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2024 CoffeeWatch. All Rights Reserved.</p>
     </footer>
 
