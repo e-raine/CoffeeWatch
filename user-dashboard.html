@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard - CoffeeWatch</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="left-section">
             <a href="index.html">
-                <img src="images/logo-removebg-preview.png" alt="CoffeeWatch Logo" class="logo-img">
+                <img src="https://github.com/e-raine/CoffeeWatch/blob/main/Images/logo-removebg-preview.png?raw=true" alt="CoffeeWatch Logo" class="logo-img">
             </a>
         </div>
         <nav class="right-section">
             <ul class="menu">
-                <li><a href="#" class="nav-link">About</a></li>
-                <li><a href="#" class="nav-link">Menu</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="cafes.html" class="nav-link">Coffee Shops</a></li>
                 <li><a href="#" class="nav-link">Contact</a></li>
                 <li>
-                    <a href="user-dashboard.html" class="user-profile">
+                    <a href="user-dashboard.html" class="user-profile active">
                         <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                         </svg>
@@ -29,7 +30,7 @@
         </nav>
     </header>
     
-    <section class="hero">
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://github.com/e-raine/CoffeeWatch/blob/main/Images/coffee-bg.jpg?raw=true')">
         <div class="hero-content">
             <h1>User Dashboard</h1>
             <p>Manage your profile, engage with coffee shops, and leave reviews all in one place!</p>
@@ -42,7 +43,7 @@
                 <h2>Your Profile</h2>
                 <p>Welcome, <span id="userName">[User Name]</span>. Manage your profile and preferences here.</p>
                 <div class="button-container">
-                    <button type="button" aria-label="Edit your profile">Edit Profile</button>
+                    <button type="button" class="primary-button" aria-label="Edit your profile">Edit Profile</button>
                 </div>
             </div>
 
@@ -74,6 +75,30 @@
     </main>
 
     <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="cafes.html" class="footer-link">Coffee Shops</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>
+                    CoffeeWatch is your go-to platform for managing your profile, engaging with coffee shops, and leaving reviews. We're passionate about coffee and committed to providing you with the best experience.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="#" class="footer-link">Facebook</a>
+                    <a href="#" class="footer-link">Twitter</a>
+                    <a href="#" class="footer-link">Instagram</a>
+                </p>
+            </div>
+        </div>
         <p>&copy; 2024 CoffeeWatch. All Rights Reserved.</p>
     </footer>
 
