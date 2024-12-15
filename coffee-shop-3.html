@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matwels - CoffeeWatch</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="coffee-shop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="left-section">
             <a href="index.html">
-                <img src="https://github.com/e-raine/CoffeeWatch/blob/main/Images/logo-removebg-preview.png?raw=true" alt="CoffeeWatch Logo" class="logo-img">
+                <img src="Images\logo.png" alt="CoffeeWatch Logo" class="logo-img">
             </a>
         </div>
         <nav class="right-section">
@@ -32,7 +33,7 @@
     <section class="hero" style="background-image: url('https://github.com/e-raine/CoffeeWatch/blob/main/Images/Matwels2.jpg?raw=true'); background-size: cover; background-position: center;">
         <div class="hero-content">
             <h1>Matwels</h1>
-            <p>Known for its cozy ambiance and premium espresso drinks, Matwels is a great place to relax and enjoy your favorite coffee.</p>
+            <p>A local favorite offering unique coffee blends and mouthwatering pastries.</p>
         </div>
     </section>
 
@@ -46,25 +47,62 @@
             <div class="menu-section">
                 <h2>Menu Highlights</h2>
                 <ul>
-                    <li>Vanilla Latte - ₱39.00</li>
-                    <li>Spanish Latte - ₱39.00</li>
-                    <li>Matcha Caffe Fusion - ₱39.00</li>
-                    <li>White Chocolate (Barista Blend) - ₱39.00</li>
-                    <li>Iced Cappuccino - ₱39.00</li>
-                    <li>Iced Caffe Americano - ₱39.00</li>
-                    <li>Iced Caffe Mocha - ₱39.00</li>
-                    <li>Caramel Macchiato - ₱39.00</li>
-                    <li>Iced Hazelnut - ₱39.00</li>
-                    <li>Cheese Cake Latte - ₱49.00</li>
-                    <li>Cookie Dough Latte - ₱49.00</li>
-                    <li>Butterscotch Latte - ₱49.00</li>
-                    <li>Tiramisu Latte - ₱49.00</li>
-                    <li>Almond Latte - ₱49.00</li>
-                    <li>Mango Caffe - ₱49.00</li>
-                    <li>Blueberry Caffe - ₱49.00</li>
-                    <li>Strawberry Caffe - ₱49.00</li>
-                    <li>Dirty Ube - ₱49.00</li>
+                    <li>
+                        <img src="Images/MATWELS_Blueberry Caffe.png" alt="Blueberry Caffe" class="menu-img">
+                        Blueberry Caffe - ₱49.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Caramel Macchiato.png" alt="Caramel Macchiato" class="menu-img">
+                        Caramel Macchiato - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Dirty Ube.png" alt="Dirty Ube" class="menu-img">
+                        Dirty Ube - ₱49.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Iced Caffe Americano.png" alt="Iced Caffe Americano" class="menu-img">
+                        Iced Caffe Americano - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Iced Caffe Mocha.png" alt="Iced Caffe Mocha" class="menu-img">
+                        Iced Caffe Mocha - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Iced Cappucino.png" alt="Iced Cappuccino" class="menu-img">
+                        Iced Cappuccino - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Iced Hazelnut.png" alt="Iced Hazelnut" class="menu-img">
+                        Iced Hazelnut - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Mango Caffe.png" alt="Mango Caffe" class="menu-img">
+                        Mango Caffe - ₱49.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Matcha Caffe Fusion.png" alt="Matcha Caffe Fusion" class="menu-img">
+                        Matcha Caffe Fusion - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Spanish Latte.png" alt="Spanish Latte" class="menu-img">
+                        Spanish Latte - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Strawberry Caffe.png" alt="Strawberry Caffe" class="menu-img">
+                        Strawberry Caffe - ₱49.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_Vanilla Latte.png" alt="White Caramel" class="menu-img">
+                        Vanilla Latte - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/MATWELS_White Chocolate (Barista Blend).png" alt="Ice Cream Latte" class="menu-img">
+                        White Chocolate (Barista Blend) - ₱39.00
+                    </li>
                 </ul>
+                <div class="button-container">
+                    <button type="button" class="action-button" onclick="placeOrder()">Place Order</button>
+                </div>
             </div>
         </section>
     </main>
@@ -73,20 +111,19 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Visit Us</h3>
-                <p>123 Coffee Street</p>
+                <p>Purok 10 Sanfrancisco street</p>
                 <p>Mintal, Davao City</p>
                 <p>Philippines</p>
             </div>
             <div class="footer-section">
                 <h3>Hours</h3>
-                <p>Monday - Friday: 7am - 8pm</p>
-                <p>Saturday - Sunday: 8am - 9pm</p>
+                <p>Monday - Sunday: 9am - 10pm</p>
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Phone: +63 912 345 6789</p>
-                <p>Email: contact@Matwels.com</p>
-                <p>Follow us: @Matwels</p>
+                <p>Phone: 0945 185 1188</p>
+                <p>Email:  krystalaraneta@gmail.com</p>
+                <p>Follow us: @MatwelsCoffeeStation</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -95,5 +132,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function placeOrder() {
+            alert("Your order has been placed! Thank you for choosing Matwels.");
+        }
+    </script>
 </body>
 </html>

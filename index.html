@@ -3,95 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoffeeWatch - University of the Philippines Mindanao - Mintal, Davao City</title>
+    <title>CoffeeWatch - Mintal, Davao City</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="left-section">
-            <a href="#">
-                <img src="https://github.com/e-raine/CoffeeWatch/blob/main/Images/logo-removebg-preview.png?raw=true" alt="CoffeeWatch Logo" class="logo-img">
-            </a>
-        </div>
-        <nav class="right-section">
-            <ul class="menu">
-                <li><a href="#coffee-shops" class="nav-link">Coffee Shops</a></li>
-                <li>
-                    <a href="user-dashboard.html" class="user-profile">
-                        <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1a0f0a">
-                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <section class="main-section">
+        <div class="circle"></div>
+        <header>
+            <div class="logo-container">
+                <a href="#"><img src="Images\logo.png" class="logo"></a>
+                <span class="brand-name">Coffee Watch</span>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="cafes.html">Coffee Shops</a></li>
+                    <li><a href="user-dashboard.html">Profile</a></li>
+                </ul>
+            </div>
+        </header>
 
-    <section class="hero" style="background-image: url('Images/index_landingpage.jpg'); background-size: cover; background-position: center;">
-        <div class="hero-content" id="home">
-            <h1>CoffeeWatch</h1>
-            <p class="tagline">Your Daily Guide to Mintal's Perfect Brew</p>
-            <p class="subtitle">Discover, Rate, and Connect with Local Coffee Spots</p>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h1>Discover Mintal's<br><span>Coffee Culture</span></h1>
+                <p>Your personal guide to the best coffee spots in Mintal. 
+                   Find your perfect brew, study spot, or meeting place.</p>
+                <div class="cta-buttons">
+                    <a href="cafes.html" class="primary-btn">Explore Cafes</a>
+                </div>
+            </div>
+
+            <div class="image-content">
+                <img src="Images/index_landingpage.jpg" class="hero-image" alt="Featured Coffee Shop">
+            </div>
         </div>
     </section>
-
-    <hr class="section-separator">
-
-    <div class="coffee-shops-container" id="coffee-shops">
-        <button id="prev-btn" class="nav-btn prev-btn">&lt;</button>
-        
-        <div class="coffee-shops-scroll">
-            <!-- Coffee Shop 1 -->
-            <section id="coffee-shop-1" class="coffee-shop">
-                <a href="coffee-shop-1.html">
-                    <h2>Cafe Libro</h2>
-                    <div class="coffee-shop-image">
-                        <img src="https://github.com/e-raine/CoffeeWatch/blob/main/Images/cafelibro1.jpg?raw=true" alt="Coffee Shop 1">
-                        <div class="overlay">
-                            <p>Known for its cozy ambiance and premium espresso drinks, Cafe Libro is a great spot to relax.</p>
-                            <a href="coffee-shop-1.html" class="learn-more-btn">Learn More</a>
-                        </div>
-                    </div>
-                </a>
-            </section>
-
-            <!-- Coffee Shop 2 -->
-            <section id="coffee-shop-2" class="coffee-shop">
-                <a href="coffee-shop-2.html">
-                    <h2>Upward</h2>
-                    <div class="coffee-shop-image">
-                        <img src="https://github.com/e-raine/CoffeeWatch/blob/main/Images/Upward1.jpg?raw=true" alt="Coffee Shop 2">
-                        <div class="overlay">
-                            <p>A perfect hangout for students and freelancers looking for a comfortable workspace with great coffee.</p>
-                            <a href="coffee-shop-2.html" class="learn-more-btn">Learn More</a>
-                        </div>
-                    </div>
-                </a>
-            </section>
-
-            <!-- Coffee Shop 3 -->
-            <section id="coffee-shop-3" class="coffee-shop">
-                <a href="coffee-shop-3.html">
-                    <h2>Matwels</h2>
-                    <div class="coffee-shop-image">
-                        <img src="https://github.com/e-raine/CoffeeWatch/blob/main/Images/Matwels2.jpg?raw=true" alt="Coffee Shop 3">
-                        <div class="overlay">
-                            <p>A local favorite offering unique coffee blends and mouthwatering pastries.</p>
-                            <a href="coffee-shop-3.html" class="learn-more-btn">Learn More</a>
-                        </div>
-                    </div>
-                </a>
-            </section>
-        </div>
-        
-        <button id="next-btn" class="nav-btn next-btn">&gt;</button>
-    </div>
-
-    <hr class="section-separator">
-
-    <footer>
-        <p>&copy; 2024 CoffeeWatch. All Rights Reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,260 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 1rem;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8B4513;
+}
+
+.user-icon {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Main Content */
+.container {
+    margin-top: 120px;
+    padding: 2rem 4rem;
+}
+
+.container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.coffee-shops-scroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding: 1rem;
+}
+
+/* Modern card styles */
+.coffee-shop {
+    background: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.coffee-shop:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-shop a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.coffee-shop h2 {
+    padding: 1.5rem;
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.coffee-shop-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.coffee-shop-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay styles */
+.overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 1.5rem;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.coffee-shop:hover .overlay {
+    bottom: 0;
+}
+
+.overlay p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #8B4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.learn-more-btn:hover {
+    background: #6b3410;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links ul {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .coffee-shops-container {
+        margin-top: 140px;
+    }
+
+    .coffee-shops-scroll {
+        grid-template-columns: 1fr;
+    }
+}
+
+.page-title {
+    text-align: center;
+    margin: 2rem 0;
+    color: #333;
+}
+
+main {
+    flex: 1;
+}
+
+/* Add this to your existing CSS file */
+html, body {
+    height: 100%; /* Ensure the body takes the full height */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+main {
+    flex: 1; /* Allow main to grow and take available space */
+    display: flex; /* Optional: if you want to center content vertically */
+    flex-direction: column; /* Optional: stack content vertically */
+}
+
+/* Ensure footer is styled correctly */
+footer {
+    background-color: #fff; /* Optional: set a background color */
+    padding: 1rem; /* Optional: add padding */
+    text-align: center; /* Center text */
+}

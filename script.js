@@ -27,3 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCarousel();
 });
 
+function imgSlider(anything) {
+    document.querySelector('.featured-image').src = anything;
+}
+
+function changeCircleColor(color) {
+    document.querySelector('.circle').style.background = color;
+}
+
