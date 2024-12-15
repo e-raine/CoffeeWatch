@@ -193,6 +193,15 @@ h2::after {
     color: #ccc;
 }
 
+.footer-section a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-section a:hover {
+    color: #8B4513;
+}
+
 .footer-bottom {
     text-align: center;
     margin-top: 3rem;
