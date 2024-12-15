@@ -11,7 +11,7 @@
     <header>
         <div class="left-section">
             <a href="index.html">
-                <img src="https://github.com/e-raine/CoffeeWatch/blob/main/Images/logo-removebg-preview.png?raw=true" alt="CoffeeWatch Logo" class="logo-img">
+                <img src="Images\logo.png" alt="CoffeeWatch Logo" class="logo-img">
             </a>
         </div>
         <nav class="right-section">
@@ -47,9 +47,38 @@
             <div class="menu-section">
                 <h2>Menu Highlights</h2>
                 <ul>
-                    <li>Iced Caramel Macchiato - ₱60.00</li>
-                    <li>Iced Vanilla Latte - ₱55.00</li>
+                    <li>
+                        <img src="Images/UPWARD_Dirty Matcha.png" alt="Dirty Matcha" class="menu-img">
+                        Blueberry Caffe - ₱49.00
+                    </li>
+                    <li>
+                        <img src="Images/UPWARD_Iced Americano.png" alt="Iced Americano" class="menu-img">
+                        Caramel Macchiato - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/UPWARD_Iced Caramel Macchiato.png" alt="Caramel Macchiato" class="menu-img">
+                        Dirty Ube - ₱49.00
+                    </li>
+                    <li>
+                        <img src="Images/UPWARD_Iced Latte.png" alt="Iced Latte" class="menu-img">
+                        Iced Caffe Americano - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/UPWARD_Iced Spanish Latte.png" alt="Iced Spanish Latte" class="menu-img">
+                        Iced Caffe Mocha - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/UPWARD_Iced Vanilla Latte.png" alt="Iced Vanilla Latte" class="menu-img">
+                        Iced Cappuccino - ₱39.00
+                    </li>
+                    <li>
+                        <img src="Images/UPWARD_Strawberry Espresso Latte.png" alt="Strawberry Espresso Latte" class="menu-img">
+                        Iced Hazelnut - ₱39.00
+                    </li>
                 </ul>
+                <div class="button-container">
+                    <button type="button" class="action-button" onclick="placeOrder()">Place Order</button>
+                </div>
             </div>
         </section>
     </main>
@@ -58,25 +87,30 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Visit Us</h3>
-                <p>456 Coffee Avenue</p>
-                <p>Mintal, Davao City</p>
+                <p>UP Mindanao Road</p>
+                <p>Davao City</p>
                 <p>Philippines</p>
             </div>
             <div class="footer-section">
                 <h3>Hours</h3>
-                <p>Monday - Friday: 7am - 8pm</p>
-                <p>Saturday - Sunday: 8am - 9pm</p>
+                <p>Monday - Saturday: 11am - 6am(the following day)</p>
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Phone: +63 912 345 6789</p>
-                <p>Email: contact@Upward.com</p>
-                <p>Follow us: @Upward</p>
+                <p>Email:  upwardcoworkinghub@gmail.com</p>
+                <p>Follow us: @upwardcoworkinghub</p>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Upward. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function placeOrder() {
+            alert("Your order has been placed! Thank you for choosing Upward.");
+        }
+    </script>
 </body>
 </html>

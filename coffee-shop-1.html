@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe Libro - CoffeeWatch</title>
     <link rel="stylesheet" href="coffee-shop.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="left-section">
             <a href="index.html">
-                <img src="https://github.com/e-raine/CoffeeWatch/blob/main/Images/logo-removebg-preview.png?raw=true" alt="CoffeeWatch Logo" class="logo-img">
+                <img src="Images\logo.png" alt="CoffeeWatch Logo" class="logo-img">
             </a>
         </div>
         <nav class="right-section">
             <ul class="menu">
                 <li><a href="#" class="nav-link">About</a></li>
-                <li><a href="#" class="nav-link">Menu</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
+                <li><a href="#menu-section" class="nav-link">Menu</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li>
                     <a href="user-dashboard.html" class="user-profile">
                         <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -39,88 +38,63 @@
 
     <main class="container">
         <section class="content">
-            <div class="about-section">
+            <div class="about-section" id="about-section">
                 <h2>About Cafe Libro</h2>
                 <p>Located in the heart of Mintal, Cafe Libro has become a favorite spot for students, freelancers, and coffee enthusiasts. It features a variety of espresso drinks, pastries, and a relaxing atmosphere perfect for spending a few hours working or socializing.</p>
             </div>
-            <div class="menu-section">
+
+            <div class="menu-section" id="menu-section">
                 <h2>Menu Highlights</h2>
                 <ul>
                     <li>
-                        <img src="Images\MATWELS_Blueberry Caffe.png" alt="Blueberry Caffe" class="menu-img">
-                        Blueberry Caffe - ₱
+                        Dirty Matcha - ₱99.00
                     </li>
                     <li>
-                        <img src="Images\MATWELS_Caramel Macchiato.png" alt="Caramel Macchiato" class="menu-img">
+                        Spanish Latte - ₱89.00, 
+                    </li>
+                    <li> 
                         Iced Latte - ₱79.00
                     </li>
                     <li>
-                        <img src="Images\MATWELS_Dirty Ube.png" alt="Dirty Ube" class="menu-img">
-                        Spanish Latte - ₱89.00
-                    </li>
-                    <li>
-                        <img src="Images\MATWELS_Iced Caffe Americano.png" alt="Dirty Matcha" class="menu-img">
-                        Dirty Matcha - ₱99.00
-                    </li>
-                    <li>
-                        <img src="Images\MATWELS_Iced Caffe Mocha.png" alt="White Caramel" class="menu-img">
                         White Caramel - ₱99.00
                     </li>
                     <li>
-                        <img src="Images\MATWELS_Iced Cappucino.png" alt="Ice Cream Latte" class="menu-img">
                         Ice Cream Latte - ₱99.00
                     </li>
                     <li>
-                        <img src="Images\MATWELS_Iced Hazelnut.png" alt="Strawberry Dirty Matcha Latte" class="menu-img">
-                        Strawberry Dirty Matcha Latte - ₱129.00
+                        Pure Classic Black - ₱69.00
                     </li>
                     <li>
-                        <img src="Images\MATWELS_Mango Caffe.png" alt="Cookie Butter Ice Cream" class="menu-img">
                         Cookie Butter Ice Cream - ₱165.00
                     </li>
                     <li>
-                        <img src="Images\MATWELS_Matcha Caffe Fusion.png" alt="Pure Classic Black" class="menu-img">
-                        Blueberry Caffe - ₱
-                    </li>
-                    <li>
-                        <img src="Images\MATWELS_Spanish Latte.png" alt="Spanish Latte" class="menu-img">
-                        Spanish Latte - ₱89.00
-                    </li>
-                    <li>
-                        <img src="Images\MATWELS_Strawberry Caffe.png" alt="Dirty Matcha" class="menu-img">
-                        Dirty Matcha - ₱99.00
-                    </li>
-                    <li>
-                        <img src="Images\MATWELS_Vanilla Latte.png" alt="White Caramel" class="menu-img">
-                        White Caramel - ₱99.00
-                    </li>
-                    <li>
-                        <img src="Images\MATWELS_White Chocolate (Barista Blend).png" alt="Ice Cream Latte" class="menu-img">
-                        Ice Cream Latte - ₱99.00
+                        Strawberry Dirty Matcha Latte - ₱129.00
                     </li>
                 </ul>
+                <div class="button-container">
+                    <button type="button" class="action-button" onclick="placeOrder()">Place Order</button>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Visit Us</h3>
-                <p>123 Coffee Street</p>
+                <p>UP Library, UP Mindanao, UP Road</p>
                 <p>Mintal, Davao City</p>
                 <p>Philippines</p>
             </div>
             <div class="footer-section">
                 <h3>Hours</h3>
-                <p>Monday - Friday: 7am - 8pm</p>
-                <p>Saturday - Sunday: 8am - 9pm</p>
+                <p>Monday - Friday: 9am - 5:30pm</p>
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Phone: (123) 456-7890</p>
-                <p>Email: info@cafelibro.com</p>
-                <p>Follow us: @cafelibro</p>
+                <p>Phone: 0963 903 0417</p>
+                <p>Email: cafelibrodavao@gmail.com</p>
+                <p>Follow us: @cafelibrodavao</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -129,5 +103,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function placeOrder() {
+            alert("Your order has been placed! Thank you for choosing Cafe Libro.");
+        }
+    </script>
 </body>
 </html>

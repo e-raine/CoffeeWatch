@@ -43,12 +43,39 @@
 }
 
 .action-button {
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #8B4513;
+    color: white;
 }
 
 .action-button:hover {
-    background-color: #e0e0e0;
+    background-color: #6b3410;
+}
+
+/* Styling for the coffee shop select dropdown */
+label[for="coffeeShopSelect"] {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+#coffeeShopSelect {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background-color: white;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="%238B4513" stroke-width="2"><path d="M5 8l5 5 5-5"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#coffeeShopSelect:focus {
+    outline: none;
+    border-color: #8B4513;
+    box-shadow: 0 0 5px rgba(139, 69, 19, 0.5);
 }
 
 textarea {
@@ -80,4 +107,65 @@ textarea:focus {
     .action-button {
         width: 100%;
     }
+} 
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.hero {
+    height: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+.content {
+    margin: 20px 0;
+}
+
+.profile-section, .engagement-section, .review-section {
+    margin-bottom: 30px;
+}
+
+.button-container, .button-group {
+    margin-top: 10px;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-link {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007BFF;
 } 

@@ -11,7 +11,7 @@
     <header>
         <div class="left-section">
             <a href="index.html">
-                <img src="https://github.com/e-raine/CoffeeWatch/blob/main/Images/logo-removebg-preview.png?raw=true" alt="CoffeeWatch Logo" class="logo-img">
+                <img src="Images\logo.png" alt="CoffeeWatch Logo" class="logo-img">
             </a>
         </div>
         <nav class="right-section">
@@ -19,13 +19,6 @@
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="cafes.html" class="nav-link">Coffee Shops</a></li>
                 <li><a href="#" class="nav-link">Contact</a></li>
-                <li>
-                    <a href="user-dashboard.html" class="user-profile active">
-                        <svg class="user-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                    </a>
-                </li>
             </ul>
         </nav>
     </header>
@@ -43,7 +36,7 @@
                 <h2>Your Profile</h2>
                 <p>Welcome, <span id="userName">[User Name]</span>. Manage your profile and preferences here.</p>
                 <div class="button-container">
-                    <button type="button" class="primary-button" aria-label="Edit your profile">Edit Profile</button>
+                    <button type="button" class="primary-button" aria-label="Edit your profile" onclick="customizeName()">Edit Profile</button>
                 </div>
             </div>
 
@@ -51,8 +44,13 @@
                 <h2>Engagement with Coffee Shops</h2>
                 <p>Explore our interactive features and engage with your favorite coffee shops.</p>
                 <div class="button-group">
-                    <button type="button" class="action-button">Place an Order</button>
-                    <button type="button" class="action-button">Join Loyalty Program</button>
+                    <label for="coffeeShopSelect">Select Coffee Shop:</label>
+                    <select id="coffeeShopSelect">
+                        <option value="">--Select a Coffee Shop--</option>
+                        <option value="Cafe Libro">Cafe Libro</option>
+                        <option value="Upward">Upward</option>
+                    </select>
+                    <button type="button" class="action-button" onclick="placeOrder()">View</button>
                 </div>
             </div>
 
@@ -103,5 +101,29 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function customizeName() {
+            const newName = prompt("Please enter your name:", "User Name");
+            if (newName) {
+                document.getElementById('userName').textContent = newName;
+            }
+        }
+
+        function placeOrder() {
+            const coffeeShop = document.getElementById('coffeeShopSelect').value;
+            if (coffeeShop) {
+                alert("Order placed at " + coffeeShop + "!");
+            } else {
+                alert("Please select a coffee shop to place an order.");
+            }
+        }
+
+        document.getElementById('reviewForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent form submission
+            const reviewText = document.getElementById('reviewText').value;
+            alert("Review submitted: " + reviewText);
+            document.getElementById('reviewForm').reset(); // Reset the form
+        };
+    </script>
 </body>
 </html>
