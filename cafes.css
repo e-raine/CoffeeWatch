@@ -17,10 +17,11 @@ body {
 /* Header Styles */
 header {
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar {
@@ -257,4 +258,110 @@ footer {
     background-color: #fff; /* Optional: set a background color */
     padding: 1rem; /* Optional: add padding */
     text-align: center; /* Center text */
+}
+
+/* Navigation Styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-container {
+    position: relative; /* Position relative for the sidebar */
+}
+
+.nav-links {
+    display: flex; /* Default to horizontal layout */
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8B4513;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+    font-size: 1.5rem; /* Size of the hamburger icon */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Sidebar Styles */
+.nav-links {
+    position: absolute; /* Position the nav container */
+    top: 0;
+    right: 0;
+    width: 250px; /* Width of the sidebar */
+    height: 100vh; /* Full height */
+    background: #fff; /* Background color */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transform: translateX(100%); /* Hide off-screen by default */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 1; /* Ensure it is above other content */
+}
+
+.nav-links.nav-active {
+    transform: translateX(0); /* Show the sidebar when active */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Reduce gap between items */
+        padding: 20px; /* Padding inside the sidebar */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 15px; /* Reduce gap between items */
+    }
+
+    .nav-links a {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        padding: 10px; /* Add padding for better touch targets */
+        text-align: left; /* Align text to the left */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 40px; /* Reduce logo size for very small screens */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* Further adjust font size */
+    }
 }
