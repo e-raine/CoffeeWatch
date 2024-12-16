@@ -25,6 +25,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize carousel
     updateCarousel();
+
+    // Sidebar toggle functionality
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('nav-active'); // Toggle the active class
+    });
+
+    // Close sidebar when a link is clicked
+    const sidebarLinks = document.querySelectorAll('.nav-links a');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('nav-active'); // Close the sidebar
+        });
+    });
 });
 
 function imgSlider(anything) {
@@ -34,4 +50,9 @@ function imgSlider(anything) {
 function changeCircleColor(color) {
     document.querySelector('.circle').style.background = color;
 }
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('nav-active'); // Toggle the active class
+});
 

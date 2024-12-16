@@ -29,7 +29,7 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    background: #8B4513;
+    background: rgba(139, 69, 19, 0.5);
     clip-path: circle(600px at right 800px);
     z-index: 1;
 }
@@ -50,6 +50,14 @@ header {
     height: auto;
 }
 
+.nav-container {
+    position: relative; /* Position relative for the sidebar */
+}
+
+.nav-links {
+    display: flex; /* Default to horizontal layout */
+}
+
 .nav-links ul {
     display: flex;
     gap: 40px;
@@ -68,6 +76,15 @@ header {
     color: #8B4513;
 }
 
+/* Sidebar Styles */
+.menu-toggle {
+    display: none; /* Hide the toggle button by default */
+    font-size: 1.5rem; /* Size of the hamburger icon */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+}
+
 /* Main Content */
 .content-wrapper {
     position: relative;
@@ -82,13 +99,15 @@ header {
 .text-content {
     max-width: 600px;
     padding-right: 50px;
+    line-height: 1.6;
 }
 
 .text-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #333;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .text-content span {
@@ -98,9 +117,10 @@ header {
 
 .text-content p {
     font-size: 1.1rem;
-    color: #666;
+    color: #444;
     margin-bottom: 2rem;
-    line-height: 1.6;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* CTA Buttons */
@@ -195,5 +215,104 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333; /* Adjust color to match your design */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack content vertically */
+        padding: 20px 0; /* Adjust padding */
+    }
+
+    .text-content {
+        padding-right: 0; /* Remove right padding */
+        text-align: center; /* Center text */
+    }
+
+    .text-content h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .text-content p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .cta-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Reduce gap between buttons */
+    }
+
+    .image-content {
+        display: flex; /* Ensure the image container is a flex container */
+        justify-content: center; /* Center the image */
+        align-items: center; /* Center the image vertically */
+    }
+
+    .hero-image {
+        max-width: 100%; /* Ensure image fits within the screen */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+        margin-top: 20px; /* Add margin above the image */
+    }
+
+    header {
+        padding: 10px; /* Adjust padding */
+    }
+
+    .nav-container {
+        position: absolute; /* Position the nav container */
+        top: 0;
+        right: 0;
+        width: 250px; /* Width of the sidebar */
+        height: 100vh; /* Full height */
+        background: #fff; /* Background color */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        transform: translateX(100%); /* Hide off-screen */
+        transition: transform 0.3s ease; /* Smooth transition */
+        z-index: 1; /* Ensure it is above other content */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 15px; /* Reduce gap between items */
+        padding: 20px; /* Padding inside the sidebar */
+    }
+
+    .nav-links a {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        padding: 10px; /* Add padding for better touch targets */
+        text-align: left; /* Align text to the left */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button */
+    }
+
+    .nav-active {
+        transform: translateX(0); /* Show the sidebar */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content h1 {
+        font-size: 2rem; /* Further adjust font size for very small screens */
+    }
+
+    .text-content p {
+        font-size: 0.9rem; /* Further adjust paragraph font size */
+    }
+
+    .primary-btn, .secondary-btn {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+
+    .logo {
+        max-width: 60px; /* Reduce logo size for very small screens */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* Further adjust font size */
+    }
 }
 
