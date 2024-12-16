@@ -50,14 +50,6 @@ header {
     height: auto;
 }
 
-.nav-container {
-    position: relative; /* Position relative for the sidebar */
-}
-
-.nav-links {
-    display: flex; /* Default to horizontal layout */
-}
-
 .nav-links ul {
     display: flex;
     gap: 40px;
@@ -74,15 +66,6 @@ header {
 
 .nav-links a:hover {
     color: #8B4513;
-}
-
-/* Sidebar Styles */
-.menu-toggle {
-    display: none; /* Hide the toggle button by default */
-    font-size: 1.5rem; /* Size of the hamburger icon */
-    background: none; /* No background */
-    border: none; /* No border */
-    cursor: pointer; /* Pointer cursor */
 }
 
 /* Main Content */
@@ -254,43 +237,6 @@ header {
         object-fit: cover; /* Cover the container while maintaining aspect ratio */
         margin-top: 20px; /* Add margin above the image */
     }
-
-    header {
-        padding: 10px; /* Adjust padding */
-    }
-
-    .nav-container {
-        position: absolute; /* Position the nav container */
-        top: 0;
-        right: 0;
-        width: 250px; /* Width of the sidebar */
-        height: 100vh; /* Full height */
-        background: #fff; /* Background color */
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-        transform: translateX(100%); /* Hide off-screen */
-        transition: transform 0.3s ease; /* Smooth transition */
-        z-index: 1; /* Ensure it is above other content */
-    }
-
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 15px; /* Reduce gap between items */
-        padding: 20px; /* Padding inside the sidebar */
-    }
-
-    .nav-links a {
-        font-size: 1rem; /* Adjust font size for smaller screens */
-        padding: 10px; /* Add padding for better touch targets */
-        text-align: left; /* Align text to the left */
-    }
-
-    .menu-toggle {
-        display: block; /* Show the toggle button */
-    }
-
-    .nav-active {
-        transform: translateX(0); /* Show the sidebar */
-    }
 }
 
 @media (max-width: 480px) {
@@ -305,14 +251,6 @@ header {
     .primary-btn, .secondary-btn {
         padding: 10px 20px; /* Adjust button padding */
         font-size: 0.9rem; /* Adjust button font size */
-    }
-
-    .logo {
-        max-width: 60px; /* Reduce logo size for very small screens */
-    }
-
-    .nav-links a {
-        font-size: 0.9rem; /* Further adjust font size */
     }
 }
 
